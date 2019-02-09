@@ -8,7 +8,7 @@ Substantial efforts have recently been put into developing neurodata file standa
 
 The same thing has happened before in other scientific fields. For example, the open microscopy environment ([OME](https://www.openmicroscopy.org/)) group developed a standard file format for microscopy data, which is hardly ever used. But they also developed a set of loader functions, which allow scientists to analyze data in multiple native formats using a single program. These loader functions successfully standardized microscopy data. In principle, NWB also allows data providers to reimplement a set of API functions -- however the comprehensive nature of NWB again means this API is complex, limiting its adoption.
 
-### How the open neurophysiology environment would work
+### How the open neurophysiology environment works
 
 Here we propose a solution to this problem: a set of three simple loader functions, that would allow users to access and search data from multiple sources. To adopt the standard, data providers can use any format they like - all they need to do is implement these three functions to fetch the data from their server and load it into Python or MATLAB. Users can then analyze this data with the same exact code as data from any other provider. The learning curve will be simple, and the loader functions would be enough for around 90% of common use cases.
 
